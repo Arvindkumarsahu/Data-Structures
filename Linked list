@@ -1,6 +1,15 @@
 /******************************************************************************
+
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include<stdio.h>
 #include<conio.h>
+#include<stdlib.h>
 
 
 struct node
@@ -16,7 +25,7 @@ void printlist(struct node* head)
     struct node* temp=head;
     while(temp)
     {
-        print("%d\t", temp->data);
+        printf("%d\t", temp->data);
         temp=temp->next;
     }
 }
@@ -67,12 +76,12 @@ struct node* insertatlast(struct node* head, int val)
 //insert at given position
 struct node* insertatposition(struct node* head, int val, int pos)
 {
-    struct node* temp=(struct node*)malloc(sieof(struct node));
+    struct node* temp=(struct node*)malloc(sizeof(struct node));
     temp->data=val;
     temp->next=NULL;
     
     struct node*p=head;
-    for(int i=0; i<n-1; i++)
+    for(int i=0; i<pos-1; i++)
     {
         p=p->next;
     }
@@ -89,7 +98,7 @@ void deleteatfirst(struct node* head)
     if(temp==NULL)
     {
         printf("\n No node found to delete");
-        break;
+        exit;
     }
     head=head->next;
     free(temp);
@@ -105,7 +114,7 @@ void deletelastnode(struct node* head)
     if(p==NULL)
     {
         printf("\n No node found to delete");
-        break;
+        exit;
     }
     while(p->next->next)
     {
@@ -115,18 +124,12 @@ void deletelastnode(struct node* head)
     q=q->next;
     p->next=NULL;
     free(q);
-    printf("n\Node deleted at last position\n");
+    printf("\node deleted at last position\n");
 }
 
 
 
 
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <stdio.h>
 
@@ -142,9 +145,9 @@ int main()
     
     printlist(head);
     
-    head=insertatposition(head, 7, 2);
-    head=insertatlast(head, 10);
-    head=insertatlast(head, 19);
+  // head=insertatposition(head, 7, 2);
+   //head=insertatlast(head, 10);
+   //head=insertatlast(head, 19);
     
 
     return 0;
