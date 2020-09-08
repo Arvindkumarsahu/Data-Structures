@@ -1,0 +1,151 @@
+/******************************************************************************
+#include<stdio.h>
+#include<conio.h>
+
+
+struct node
+{
+    int data;
+    struct node* next;
+};
+
+
+//function to print the list
+void printlist(struct node* head)
+{
+    struct node* temp=head;
+    while(temp)
+    {
+        print("%d\t", temp->data);
+        temp=temp->next;
+    }
+}
+
+
+//insrting data at beginning
+struct node* insertatfirst(struct node* head, int val)
+{
+    struct node* temp=(struct node*)malloc(sizeof(struct node));
+    temp->data=val;
+    temp->next=NULL;
+    
+    if(head==NULL)
+    {
+        head=temp;
+    }
+    else
+    {
+        temp->next=head->next;
+    }return head;
+    
+}
+
+
+//inserting node at last position
+struct node* insertatlast(struct node* head, int val)
+{
+    struct node* temp=(struct node*)malloc(sizeof(struct node));
+    temp->data=val;
+    temp->next=NULL;
+    
+    if(head==NULL)
+    {
+        head=temp;
+    }
+    else
+    {
+        struct node*p=head;
+        while(p->next)
+        {
+            p=p->next;
+        }
+        p->next=temp;
+    }return head;
+    
+}
+
+//insert at given position
+struct node* insertatposition(struct node* head, int val, int pos)
+{
+    struct node* temp=(struct node*)malloc(sieof(struct node));
+    temp->data=val;
+    temp->next=NULL;
+    
+    struct node*p=head;
+    for(int i=0; i<n-1; i++)
+    {
+        p=p->next;
+    }
+    temp->next=p->next;
+    p->next=temp;
+    return head;
+}
+
+
+//delete node at first position
+void deleteatfirst(struct node* head)
+{
+    struct node*temp=head;
+    if(temp==NULL)
+    {
+        printf("\n No node found to delete");
+        break;
+    }
+    head=head->next;
+    free(temp);
+    printf("Node at first position deleted");
+    
+}
+
+
+// function to delete node at last position
+void deletelastnode(struct node* head)
+{
+    struct node*p=head;
+    if(p==NULL)
+    {
+        printf("\n No node found to delete");
+        break;
+    }
+    while(p->next->next)
+    {
+        p=p->next;
+    }
+    struct node*q=p;
+    q=q->next;
+    p->next=NULL;
+    free(q);
+    printf("n\Node deleted at last position\n");
+}
+
+
+
+
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    printf("Welcome to Linked list :\n");
+    
+    struct node* head=NULL;
+    head=insertatfirst(head, 4);
+    head=insertatfirst(head, 3);
+    head=insertatfirst(head, 2);
+    head=insertatfirst(head, 1);
+    
+    printlist(head);
+    
+    head=insertatposition(head, 7, 2);
+    head=insertatlast(head, 10);
+    head=insertatlast(head, 19);
+    
+
+    return 0;
+}
