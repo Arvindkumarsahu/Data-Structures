@@ -190,3 +190,85 @@ int main()
     cout<<"\n";
     return 0;
 }
+
+
+
+/*
+
+Pyramid structure 1
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+
+Pyramid structure 2
+      * 
+                * * 
+              * * * 
+            * * * * 
+          * * * * * 
+        * * * * * * 
+      * * * * * * * 
+    * * * * * * * * 
+  * * * * * * * * * 
+* * * * * * * * * * 
+
+Pyramid structure 3
+
+  * 
+       * * 
+      * * * 
+     * * * * 
+    * * * * * 
+Pyramid structure 4
+
+
+ *
+  ***
+ *****
+*******
+Pyramid structure 5
+
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5 
+
+Pyramid structure 6
+
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+
+Pyramid structure 7
+
+A 
+B B 
+C C C 
+D D D D 
+E E E E E 
+
+Pyramid structure 8
+
+A 
+B B 
+C C C 
+D D D D 
+E E E E E 
+
+Pyramid structure 9
+
+A 
+B C 
+D E F 
+G H I J 
+K L M N O 
+
+
+
+*/
